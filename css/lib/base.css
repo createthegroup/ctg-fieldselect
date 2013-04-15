@@ -1,0 +1,146 @@
+/*
+ * base.css v0.1
+ * Encapsulated adaptation of [normalize.css](http://necolas.github.com/normalize.css/)
+ * designed to be used in conjunction with a reset stylesheet and edited on a
+ * project by project basis.
+ *
+ * Usage:
+ *     [include a reset stylesheet here...]
+ *     <div>
+ *         <h1>This element is unformatted</h1>
+ *         <div class="-base">
+ *             <h2>This element is formatted</h2>
+ *             <p>Adding `-base` to any element will turn it's html content into a
+ *             formatted document without the need for extra classes or IDs.</p>
+ *         </div>
+ *     </div>
+ */
+
+ /** LINKS **/
+
+.\-base a:link,
+.\-base a:visited {
+    color: #666;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.\-base a:hover,
+.\-base a:focus,
+.\-base a:active {
+    color: #000;
+    text-decoration: underline;
+}
+
+ /** TYPOGRAPHY **/
+
+.\-base {
+	line-height: normal;
+}
+
+.\-base h1,
+.\-base h2,
+.\-base h3,
+.\-base h4,
+.\-base h5,
+.\-base h6,
+.\-base p {
+ 	margin: 1em 0;
+}
+
+.\-base abbr[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+.\-base b,
+.\-base strong {
+    font-weight: bold;
+}
+
+.\-base dfn,
+.\-base dfn {
+    font-style: italic;
+}
+
+.\-base ins,
+.\-base del,
+.\-base s,
+.\-base u {
+	text-decoration: underline;
+}
+
+.\-base b,
+.\-base strong {
+    font-weight: bold;
+}
+
+.\-base address,
+.\-base cite,
+.\-base dfn,
+.\-base em,
+.\-base i {
+    font-style: italic;
+}
+
+.\-base blockquote {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.\-base mark {
+    background: #ff0;
+    color: #000;
+}
+
+.\-base p,
+.\-base pre {
+    margin: 1em 0;
+}
+
+.\-base small {
+    font-size: 80%;
+}
+
+.\-base sub,
+.\-base sup {
+    font-size: 75%;
+    bottom: -0.25em;
+}
+
+.\-base sup {
+	top: -0.25em;
+}
+
+.\-base code,
+.\-base kbd,
+.\-base pre,
+.\-base samp {
+    font-family: "Courier New", "Andale Mono", monospace;
+}
+
+/** LISTS **/
+
+.\-base dl,
+.\-base menu,
+.\-base ol,
+.\-base ul {
+    margin: 1em 0;
+}
+
+.\-base dd {
+    margin: 0 0 0 40px;
+}
+
+.\-base ol,
+.\-base ul {
+    padding: 0 0 0 40px;
+}
+
+.\-base ul {
+    list-style: disc;
+}
+
+.\-base ol {
+    list-style: decimal;
+}

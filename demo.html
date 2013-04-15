@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width" />
+        
+        <title>jQuery.ctg.fieldSelect.js</title>
+        
+        <link rel="stylesheet" href="css/lib/reset.css" />
+        <link rel="stylesheet" href="css/lib/base.css" />
+
+        <style type="text/css">
+
+        	body {
+        		font-size: 87.5%;
+        		font-family: arial, helvetica, sans-serif;
+        		margin: 20px;
+				color: #1b1b1b;
+				line-height: 1;
+        	}
+
+        	input[type=text],
+        	.ctg-fieldselect-value {
+        		border: 1px solid #555;
+        		padding: 6px 10px;
+        		display: block;
+        		border-radius: 2px;
+        		color: ;
+        	}
+
+        	input[type=text]:focus {
+        		border-color: #1b1b1b;
+				color: #1b1b1b;
+        	}
+
+        	.\-field {
+        		margin: 0 0 20px;
+        	}
+
+        	.\-field label {
+        		display: inline-block;
+        		margin: 0 0 10px;
+        	}
+
+        	/* select box */
+			.js .ctg-fieldselect select {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+
+			.ctg-fieldselect {
+				display: block;
+				position: relative;
+			}
+
+				.ctg-fieldselect-value {
+					display: inline-block;
+					position: relative;
+					background: #fff;
+					padding-right: 26px;
+				}
+
+					.ctg-fieldselect-focus .ctg-fieldselect-value {
+						border-color: #1b1b1b;
+						color: #1b1b1b;
+					}
+
+					.ctg-fieldselect-icon {
+						position: absolute;
+						top: 11px;
+						right: 10px;
+						border-top: 4px solid #555;
+		                border-left: 4px solid transparent;
+		                border-right: 4px solid transparent;
+					}
+
+					.ctg-fieldselect-focus .ctg-fieldselect-icon {
+						border-top-color: #1b1b1b;
+					}
+
+				.ctg-fieldselect-disabled {
+					opacity: 0.4;
+					filter: alpha(opacity=0);
+				}
+
+				.field-gender .ctg-fieldselect-value {
+					1width: 300px;
+				}
+			
+		</style>
+
+        <script type="text/javascript">(function(H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)</script>
+        <script type="text/javascript" src="js/lib/jquery.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/jquery.ctg.fieldselect.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$('.ctg-fieldselect').fieldSelect();
+			});
+		</script>
+    </head>
+    <body>
+    	<div class="site">
+    		<div class="header -base">
+    			<h1>jQuery.ctg.fieldselect.js</h1>
+    			<p>jQuery field select allows custom styling of select boxes whilst maintainnig as much of the native select box functionality as possible.</p>
+    		</div>
+			<form id="frm-payment" action="/checkout/payment" method="post">
+				<ul class="-field-set">
+					<li class="-field -field-text">
+						<label for="name">Name:</label>
+						<input name="name" id="name" type="text" />
+					</li>
+					<li class="-field -field-select field-card-type">
+						<label for="">Card Type (auto width):</label>
+						<div class="ctg-fieldselect">
+							<select name="frm-payment_card-type" id="frm-payment_card-type">
+								<option value="">Select</option>
+								<option value="007">JCB</option>
+								<option value="003">American Express</option>
+								<option value="004">Discover</option>
+								<option value="002">MasterCard</option>
+								<option value="001">Visa</option>
+							</select>
+						</div>
+					</li>
+					<li class="-field -field-select field-gender">
+						<label for="">Gender (fixed width):</label>
+						<div class="ctg-fieldselect">
+							<select name="frm-payment_gender" id="frm-payment_gender">
+								<option value="">Select</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</div>
+					</li>
+					<li class="-field -field-select field-gender">
+						<label for="">Gender (disabled):</label>
+						<div class="ctg-fieldselect">
+							<select name="frm-payment_gender" id="frm-payment_gender" disabled="disabled">
+								<option value="">Select</option>
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</select>
+						</div>
+					</li>
+				</ul>
+			</form>
+		</div>
+    </body>
+</html>

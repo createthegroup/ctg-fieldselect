@@ -1,0 +1,12 @@
+    
+    .ctg-fieldselect {
+        position: relative;
+    }
+
+        .ctg-fieldselect-value {
+            display: inline-block;
+        }
+
+        .js .ctg-fieldselect-value select {
+            display: block;
+        }
